@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="a" class="com.igeek.ioc.Person">
+        <property name="username" value="王朝"></property>
+        <property name="age" value="56"></property>
+        <property name="car" ref="b"></property>
+        <property name="car.price" value="500000.0"></property>
+    </bean>
+
+    <bean id="b" class="com.igeek.ioc.Car">
+        <property name="label" value="奥迪"></property>
+        <property name="price" value="300000.0"></property>
+    </bean>
+
+</beans>
